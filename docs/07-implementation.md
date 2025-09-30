@@ -1,5 +1,7 @@
 # Appendix: Actionable Insights for Pre-Inference Prompt Linter
 
+[← Previous: Research Evidence](05-research-evidence.md) | [Back to README](../README.md)
+
 This appendix provides implementation-focused insights derived from each of the six research papers, designed for building a pre-inference prompt linter for frontier models.
 
 ## 1. "Knowledge Conflicts for LLMs: A Survey" (Xu et al., 2024)
@@ -469,3 +471,7 @@ class ComprehensivePromptLinter:
 - Some interference only emerges during computation
 - Task classification may be imperfect
 - Intent detection relies on explicit markers
+
+---
+
+[← Previous: Research Evidence](05-research-evidence.md) | [Back to README](../README.md)

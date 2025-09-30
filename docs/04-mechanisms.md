@@ -1,5 +1,7 @@
 # Why Prompts Have Unintended Consequences: Evidence from Research
 
+[← Previous: Mercury Experiment](03-mercury-experiment.md) | [Back to README](../README.md) | [Next: Research Evidence →](05-research-evidence.md)
+
 Based on the six papers analyzed, prompts produce unintended consequences through several interconnected mechanisms:
 
 ## 1. **Superposition Forces Everything to Coexist**
@@ -68,6 +70,8 @@ These papers collectively reveal that **ambiguity is destructive because models 
 
 This isn't a bug that can be fixed with better training - it's a fundamental consequence of how neural networks represent and process information in high-dimensional spaces with finite capacity.
 
+**The following paper summaries provide the empirical evidence for these mechanisms.**
+
 ---
 
-**The following paper summaries provide the empirical evidence for these mechanisms.**
+[← Previous: Mercury Experiment](03-mercury-experiment.md) | [Back to README](../README.md) | [Next: Research Evidence →](05-research-evidence.md)

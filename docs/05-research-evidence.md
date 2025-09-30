@@ -1,5 +1,7 @@
 # Research Evidence: ArXiv Papers
 
+[← Previous: Failure Mechanisms](04-mechanisms.md) | [Back to README](../README.md) | [Next: Implementation Guide →](07-implementation.md)
+
 ## ArXiv PDF Links
 
 1. **"Knowledge Conflicts for LLMs: A Survey"** (Xu et al., 2024)
@@ -99,3 +101,7 @@ Ambiguity becomes especially destructive when:
 The Mercury experiment perfectly demonstrated all of these mechanisms: rather than choosing one instruction set or flagging the conflict, the model produced a corrupted compromise that looked superficially reasonable but violated multiple requirements. It showed unclear intent about which instruction to follow, overlapping requirements competing in the same representational space, defaulting to statistically common patterns (English, standard formatting), all produced with false confidence.
 
 This paints a concerning picture: not only can models not discard conflicting information, but the very mechanisms that make them more capable (superposition, strong priors, pattern matching) make them MORE vulnerable to ambiguity, not less. The corruption isn't a bug - it's an inevitable consequence of how neural networks encode and process information under constraints.
+
+---
+
+[← Previous: Failure Mechanisms](04-mechanisms.md) | [Back to README](../README.md) | [Next: Implementation Guide →](07-implementation.md)

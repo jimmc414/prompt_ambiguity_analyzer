@@ -1,5 +1,7 @@
 # Mercury Experiment: Demonstrating Prompt Ambiguity
 
+[← Previous: Hypothesis](02-hypothesis.md) | [Back to README](../README.md) | [Next: Failure Mechanisms →](04-mechanisms.md)
+
 ## The Mercury Prompt (Demonstrating Ambiguity)
 
 ```
@@ -83,6 +85,8 @@ This mirrors the emergent misalignment findings - when models can't resolve conf
 
 The fact that I couldn't cleanly "discard" any instruction but instead tried to satisfy all of them simultaneously demonstrates the core problem you identified - ambiguity without the ability to disambiguate corrupts the entire response generation process.
 
+**These observations from the Mercury experiment map directly to ten distinct mechanisms identified in recent research.**
+
 ---
 
-**These observations from the Mercury experiment map directly to ten distinct mechanisms identified in recent research.**
+[← Previous: Hypothesis](02-hypothesis.md) | [Back to README](../README.md) | [Next: Failure Mechanisms →](04-mechanisms.md)

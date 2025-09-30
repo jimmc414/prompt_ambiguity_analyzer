@@ -1,5 +1,7 @@
 # Objective Statement for Pre-Inference Prompt Ambiguity Detection Meta-Prompt
 
+[← Back to README](../README.md) | [Next: Hypothesis →](02-hypothesis.md)
+
 ## Purpose
 Develop a comprehensive meta-prompt that analyzes and classifies ambiguous, conflicting, or problematic instruction patterns in user prompts before submission to frontier language models, based on empirical evidence that such patterns cause systematic output corruption through superposition interference and emergent misalignment.
 
@@ -63,3 +65,7 @@ The meta-prompt will:
 5. Provide an analysis summary predicting likely failure modes
 
 This objective acknowledges both the theoretical impossibility of perfect conflict detection via prompt analysis and the practical value of identifying high-risk patterns before they corrupt model outputs.
+
+---
+
+[← Back to README](../README.md) | [Next: Hypothesis →](02-hypothesis.md)

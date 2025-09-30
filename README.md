@@ -2,6 +2,18 @@
 
 A research-driven framework for detecting and resolving conflicts in prompts that cause systematic output corruption in frontier language models.
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Quick Start](#quick-start)
+- [How It Works](#how-it-works)
+- [Research Foundation](#research-foundation)
+- [Documentation](#documentation)
+- [Example Use Case](#example-use-case)
+- [Key Features](#key-features)
+- [Limitations](#limitations)
+
 ## Overview
 
 This project provides meta-prompts and workflows to identify prompt ambiguities that trigger:
@@ -17,6 +29,7 @@ Based on 6 peer-reviewed papers analyzing how neural networks handle conflicting
 prompt_ambiguity_analyzer/
 ├── README.md                    # This file
 ├── WORKFLOW.md                  # Instructions for AI assistants
+├── CLAUDE.md                    # Claude Code configuration
 ├── prompts/
 │   ├── 1-detect-conflicts.md   # Standalone detection meta-prompt
 │   └── 2-resolve-conflicts.md  # Standalone disambiguation meta-prompt
@@ -35,12 +48,12 @@ prompt_ambiguity_analyzer/
 ### For Manual Use (Copy-Paste to LLM)
 
 1. **Analyze your prompt for conflicts:**
-   - Copy the contents of `prompts/1-detect-conflicts.md`
+   - Copy the contents of [prompts/1-detect-conflicts.md](prompts/1-detect-conflicts.md)
    - Replace `{Insert your prompt here}` with your actual prompt
    - Submit to any frontier LLM
 
 2. **Get a rewritten version:**
-   - Copy the contents of `prompts/2-resolve-conflicts.md`
+   - Copy the contents of [prompts/2-resolve-conflicts.md](prompts/2-resolve-conflicts.md)
    - Insert your original prompt and the conflict analysis
    - Submit to get an optimized version
 
@@ -54,11 +67,12 @@ prompt_ambiguity_analyzer/
    - Run the disambiguation meta-prompt
    - Provide the rewritten prompt
 
-See `WORKFLOW.md` for detailed AI assistant instructions.
+See [WORKFLOW.md](WORKFLOW.md) for detailed AI assistant instructions.
 
 ## How It Works
 
 ### Detection (Prompt 1)
+
 Analyzes prompts across 15 categories:
 - Mutual exclusions ("only X" + "only Y")
 - Format conflicts (JSON + "no special characters")
@@ -74,6 +88,7 @@ Analyzes prompts across 15 categories:
 - Overall risk assessment
 
 ### Disambiguation (Prompt 2)
+
 Takes the conflict analysis and:
 - Preserves your original intent
 - Resolves conflicts systematically
@@ -93,17 +108,24 @@ Based on 6 ArXiv papers:
 5. **Task Matters** - How task type affects conflict resolution
 6. **Safety Guardrails Collapse** - Representational overlap problems
 
-Full citations and summaries in `docs/05-research-evidence.md`
+Full citations and summaries in [docs/05-research-evidence.md](docs/05-research-evidence.md)
 
 ## Documentation
 
-- **`docs/01-objective.md`** - Project goals, scope, and limitations
-- **`docs/02-hypothesis.md`** - Core hypothesis about superposition
-- **`docs/03-mercury-experiment.md`** - Real example of conflict corruption
-- **`docs/04-mechanisms.md`** - 10 mechanisms causing unintended consequences
-- **`docs/05-research-evidence.md`** - Research papers and key findings
-- **`docs/07-implementation.md`** - Technical implementation insights
-- **`06-meta-prompts.md`** - Complete meta-prompt documentation
+### Core Concepts
+- [Objective Statement](docs/01-objective.md) - Project goals, scope, and limitations
+- [Hypothesis](docs/02-hypothesis.md) - Core hypothesis about superposition
+- [Mercury Experiment](docs/03-mercury-experiment.md) - Real example of conflict corruption
+
+### Research and Implementation
+- [Failure Mechanisms](docs/04-mechanisms.md) - 10 mechanisms causing unintended consequences
+- [Research Evidence](docs/05-research-evidence.md) - Research papers and key findings
+- [Implementation Guide](docs/07-implementation.md) - Technical implementation insights
+
+### Meta-Prompts
+- [Integrated Documentation](06-meta-prompts.md) - Complete meta-prompt documentation
+- [Detection Prompt](prompts/1-detect-conflicts.md) - Standalone conflict detection
+- [Resolution Prompt](prompts/2-resolve-conflicts.md) - Standalone disambiguation
 
 ## Example Use Case
 
@@ -115,9 +137,9 @@ Be extremely detailed but keep it brief.
 ```
 
 **After Detection:**
-- ❌ HARD conflict: "exactly 100 words" vs "exactly 500 words"
-- ❌ HARD conflict: "JSON format" vs "no special characters"
-- ❌ SOFT conflict: "extremely detailed" vs "keep it brief"
+- HARD conflict: "exactly 100 words" vs "exactly 500 words"
+- HARD conflict: "JSON format" vs "no special characters"
+- SOFT conflict: "extremely detailed" vs "keep it brief"
 
 **After Disambiguation:**
 ```
@@ -134,19 +156,19 @@ FORMAT:
 - Style: Technical but accessible
 
 SUCCESS CRITERIA:
-□ Length between 300-400 words
-□ Logical section organization
-□ Key points clearly explained
+- Length between 300-400 words
+- Logical section organization
+- Key points clearly explained
 ```
 
 ## Key Features
 
-✅ Research-backed detection categories
-✅ Specific conflict quotation and location
-✅ Severity ratings and impact predictions
-✅ Intent-preserving disambiguation
-✅ Structured output templates
-✅ Automated workflow for AI assistants
+- Research-backed detection categories
+- Specific conflict quotation and location
+- Severity ratings and impact predictions
+- Intent-preserving disambiguation
+- Structured output templates
+- Automated workflow for AI assistants
 
 ## Limitations
 
@@ -156,12 +178,4 @@ As a prompt-based analysis tool:
 - Cannot detect all interference that emerges during computation
 - Provides heuristic risk assessment, not guarantees
 
-See `docs/01-objective.md` for full discussion of limitations and value proposition.
-
-## Contributing
-
-This is a research documentation project. If you find errors or want to suggest improvements based on additional research, please open an issue.
-
-## License
-
-Research documentation - use freely with attribution.
+See [docs/01-objective.md](docs/01-objective.md) for full discussion of limitations and value proposition.
