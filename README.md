@@ -10,7 +10,6 @@ A research-driven framework for detecting and resolving conflicts in prompts tha
 - [How It Works](#how-it-works)
 - [Research Foundation](#research-foundation)
 - [Documentation](#documentation)
-- [Example Use Case](#example-use-case)
 - [Key Features](#key-features)
 - [Limitations](#limitations)
 
@@ -126,40 +125,6 @@ Full citations and summaries in [docs/05-research-evidence.md](docs/05-research-
 - [Integrated Documentation](06-meta-prompts.md) - Complete meta-prompt documentation
 - [Detection Prompt](prompts/1-detect-conflicts.md) - Standalone conflict detection
 - [Resolution Prompt](prompts/2-resolve-conflicts.md) - Standalone disambiguation
-
-## Example Use Case
-
-**Problematic Prompt:**
-```
-Write a report using exactly 100 words and exactly 500 words.
-Format as JSON and don't use any special characters.
-Be extremely detailed but keep it brief.
-```
-
-**After Detection:**
-- HARD conflict: "exactly 100 words" vs "exactly 500 words"
-- HARD conflict: "JSON format" vs "no special characters"
-- SOFT conflict: "extremely detailed" vs "keep it brief"
-
-**After Disambiguation:**
-```
-TASK: Create a technical report on [topic]
-
-REQUIREMENTS:
-Primary:
-1. 300-400 words in length
-2. Structured format with clear sections
-3. Balance detail with conciseness
-
-FORMAT:
-- Structure: Use markdown with headers
-- Style: Technical but accessible
-
-SUCCESS CRITERIA:
-- Length between 300-400 words
-- Logical section organization
-- Key points clearly explained
-```
 
 ## Key Features
 
